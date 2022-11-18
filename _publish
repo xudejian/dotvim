@@ -1,0 +1,8 @@
+#!/bin/bash
+
+pandoc resume.md -o index.html -t html5 \
+  --standalone \
+  --email-obfuscation=references \
+  --data-dir=_pandoc \
+  --include-in-header=_pandoc/header_styles.html \
+  -f markdown+smart
